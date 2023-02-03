@@ -7,27 +7,39 @@ class Movie
     public $title;
     public $actors;
     public $plot;
-    public $genre;
+    public $genres;
     public $isProhibited;
 
     //cosntructor
-    public function __construct($_title, $_actors, $_plot,  $_genre, $_isProhibited)
+    public function __construct($_title, $_actors, $_plot,  $_genres, $_isProhibited)
     {
         $this->title = $_title;
         $this->actors = $_actors;
         $this->plot = $_plot;
-        $this->genre = $_genre;
+        $this->genre = $_genres;
         $this->isProhibited = $_isProhibited;
     }
 
     //methods condivise
     public function getTitle()
     {
-        if ($this->isProhibited) {
-            return $this->title;
-        } else {
-            return $this->actors;
-        }
+        return $this->title;
+    }
+    public function getActors()
+    {
+        return $this->actors;
+    }
+    public function getPlot()
+    {
+        return $this->plot;
+    }
+    public function getGenres()
+    {
+        return $this->genres;
+    }
+    public function isProhibited()
+    {
+        return $this->isProhibited;
     }
 }
 
