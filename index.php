@@ -9,7 +9,16 @@
 </head>
 
 <body>
-
+    <header>
+        <h1>Movies</h1>
+    </header>
+    <main>
+        <ul>
+            <li>
+                <?php ?>
+            </li>
+        </ul>
+    </main>
 
 </body>
 

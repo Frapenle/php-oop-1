@@ -23,10 +23,15 @@ class Movie
     //methods condivise
     public function getTitle()
     {
-        return $this->title;
+        if ($this->isProhibited) {
+            return $this->title;
+        } else {
+            return $this->actors;
+        }
     }
 }
 
-$movieOne = new Movie('Harry Potter', 'Daniel Radcliffe', 'trama', 'romanzo', false);
-
-var_dump($movieOne);
+$harry_potter_1 = new Movie('Harry Potter', 'Daniel Radcliffe', 'trama', 'romanzo', false);
+$harry_potter_2 = new Movie('Harry Potter 2', 'Daniel Radcliffe', 'trama', 'romanzo', false);
+$batman = new Movie('Batman begins', 'Christian Bale', 'trama', 'azione', true);
+$spiderman = new Movie('Harry Potter', 'Daniel Radcliffe', 'trama', 'azione', false);
