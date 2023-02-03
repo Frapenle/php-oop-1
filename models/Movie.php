@@ -8,7 +8,25 @@ class Movie
     public $actors;
     public $plot;
     public $genre;
-    public $isPprohibited;
+    public $isProhibited;
+
+    //cosntructor
+    public function __construct($_title, $_actors, $_plot,  $_genre, $_isProhibited)
+    {
+        $this->title = $_title;
+        $this->actors = $_actors;
+        $this->plot = $_plot;
+        $this->genre = $_genre;
+        $this->isProhibited = $_isProhibited;
+    }
+
+    //methods condivise
+    public function getTitle()
+    {
+        return $this->title;
+    }
 }
 
-//gli oggetti/istanze della classe si generano ==> $var = new Class();
+$movieOne = new Movie('Harry Potter', 'Daniel Radcliffe', 'trama', 'romanzo', false);
+
+var_dump($movieOne);
