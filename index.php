@@ -37,7 +37,7 @@ include_once __DIR__ . '/db/db.php';
                                     </p>
                                     <div class="title flex items-start">
                                         <div class="text-gray-900 font-bold text-xl mb-2 mr-5"><?php echo $movie->getTitle() ?></div>
-                                        <img class="w-6 h-6 rounded-full mr-1" src="<?php echo ($movie->isProhibited()) ?>" alt="#">
+                                        <img class="w-6 h-6 rounded-full mr-1" src="<?php echo ($movie->isProhibited()) ?>" alt="<?php echo $movie->getTitle() ?>">
                                     </div>
 
                                     <p class="text-gray-500 text-base mb-5"><?php echo $movie->getPlot() ?></p>
