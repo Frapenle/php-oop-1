@@ -1,0 +1,12 @@
+header {
+    height: 100px;
+    margin-top: 1rem;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
