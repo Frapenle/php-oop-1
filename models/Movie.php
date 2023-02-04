@@ -1,6 +1,9 @@
 <?php
+require_once __DIR__ . '/Genre.php';
+// include __DIR__ . '/../db/db.php';
 
 //classes start always with PascalCase
+//the class name MUST be equal to the file name
 class Movie
 {
     //inserire $var (chiamate attributes or fields)
@@ -13,7 +16,7 @@ class Movie
     public $image;
 
     //cosntructor
-    public function __construct($_title, $_actors, $_plot,  $_genres, $_isProhibited, $image)
+    public function __construct($_title, $_actors, $_plot, Genre $_genres, $_isProhibited, $image)
     {
         $this->title = $_title;
         $this->actors = $_actors;
@@ -23,7 +26,7 @@ class Movie
         $this->image = $image;
     }
 
-    //methods condivise
+    //methods condivise, Method names MUST be declared in camelCase
     public function getTitle()
     {
         return $this->title;
@@ -36,10 +39,7 @@ class Movie
     {
         return $this->plot;
     }
-    public function getGenres()
-    {
-        return $this->genres;
-    }
+
     public function isProhibited()
     {
         if ($this->isProhibited) {
@@ -52,4 +52,13 @@ class Movie
     {
         return $this->image;
     }
+
+    public function getAllInfo()
+    {
+        $allInfo = $this->title . $this->actors . $this->plot . $this->genres;
+        return $allInfo;
+    }
 }
+
+// $harry_potter_1 = new Movie('Harry Potter', 'Daniel Radcliffe', 'tt', new Genre(), false, 'https://www.warnerbros.it/sites/default/files/HP1_MOVIE_V_DD_KA_TT_1400x2100_300dpi_IT.jpg');
+// var_dump($harry_potter_1);
