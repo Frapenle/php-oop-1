@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/Genre.php';
-// include __DIR__ . '/../db/db.php';
+include __DIR__ . '/Actor.php';
 
 //classes start always with PascalCase
 //the class name MUST be equal to the file name
@@ -16,7 +16,7 @@ class Movie
     public $image;
 
     //cosntructor
-    public function __construct($_title, $_actors, $_plot, Genre $_genres, $_isProhibited, $image)
+    public function __construct($_title, Actor $_actors, $_plot, Genre $_genres, $_isProhibited, $image)
     {
         $this->title = $_title;
         $this->actors = $_actors;

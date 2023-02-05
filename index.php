@@ -45,7 +45,7 @@ include_once __DIR__ . '/db/db.php';
                                 </div>
                                 <div class="flex justify-between">
                                     <div class="info">
-                                        <p class="text-gray-500 text-base"><span class="text-black font-medium">Attori: </span> <?php echo $movie->getActors() ?></p>
+                                        <p class="text-gray-500 text-base"><span class="text-black font-medium">Attori: </span> <?php echo $movie->actors ?></p>
                                         <p class="text-gray-500 text-base"><span class="text-black font-medium">Genere: </span><?php echo $movie->genres ?></p>
                                     </div>
                                     <div class="img">
